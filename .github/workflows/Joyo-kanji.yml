@@ -24,7 +24,7 @@ jobs:
 
       - name: Run script
         run: |
-          python create_kanji_svg.py
+          python Joyo-kanji_svg.py
 
       - name: Upload SVG files
         uses: actions/upload-artifact@v3 
