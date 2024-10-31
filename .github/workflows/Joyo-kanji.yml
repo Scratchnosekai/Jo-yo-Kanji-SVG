@@ -3,7 +3,7 @@ name: Generate SVGs
 on:
   push:
     branches:
-      - main  # mainブランチにプッシュしたときに実行
+      - main  
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8'  # Pythonのバージョンを指定
+          python-version: '3.8'  
 
       - name: Install dependencies
         run: |
@@ -27,7 +27,7 @@ jobs:
           python create_kanji_svg.py
 
       - name: Upload SVG files
-        uses: actions/upload-artifact@v3  # v3に変更
+        uses: actions/upload-artifact@v3 
         with:
           name: svg-files
           path: svg_files/
